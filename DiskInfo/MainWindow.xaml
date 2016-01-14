@@ -1,0 +1,27 @@
+﻿<Window x:Class="DiskInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiskInfo"
+        mc:Ignorable="d"
+        Title="磁盘信息" Height="600" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="500"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock" Padding="10" Grid.Row="0" HorizontalAlignment="Stretch" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" Text="磁盘信息" VerticalAlignment="Top" Background="#FF03A9F4" Foreground="White" Grid.ColumnSpan="3" Margin="0,0,0,0"/>
+        <TextBox x:Name="textBox" VerticalAlignment="Stretch" Padding="10" Grid.Row="1" TextWrapping="Wrap" d:LayoutOverrides="VerticalAlignment" FontSize="18.667"/>
+        <Button x:Name="button" Click="button_Click" Content="请输入磁盘的盘符" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" FontSize="18.667" />
+        <TextBlock x:Name="diskInfoBlock" Padding="8" Margin="26,25.5,63,37.5" Grid.Row="2" TextWrapping="Wrap" FontSize="18.667" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
